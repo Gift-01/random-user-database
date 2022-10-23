@@ -1,0 +1,23 @@
+.material-symbols-outlined {
+  font-size: 150px;
+}
+
+.error-page {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page h1 {
+  font-size: 40px;
+}
+
+.error-page h2 {
+  font-size: 30px;
+}
+
+.error-page p {
+  font-size: 18px;
+}

@@ -1,0 +1,27 @@
+.searchbar {
+  width: 60%;
+  height: 40px;
+  border-radius: 8px;
+  border-width: 1px;
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+
+.fixed {
+  position: sticky;
+  top: 0;
+  padding-top: 30px;
+  background-color: #fff;
+}
+
+.user-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  flex-basis: 30%;
+  height: 350px !important;
+}
