@@ -9,7 +9,7 @@ function useFetch(url, options) {
   const initialState = {
     error: undefined,
     data: undefined,
-    loading: false
+    loading: false,
   };
 
   // Keep state logic separated
@@ -65,7 +65,7 @@ function useFetch(url, options) {
     return () => {
       cancelRequest.current = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, [url]);
 
   return state;
