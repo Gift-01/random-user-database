@@ -48,7 +48,7 @@ export default function Home() {
         (val) =>
           val.name?.first?.toLowerCase()?.startsWith(name) ||
           val.name?.last?.toLowerCase()?.startsWith(name)
-      ) === []
+      )?.length == 0
     ) {
       setNewError("User does not exist!");
     } else {
@@ -88,7 +88,7 @@ export default function Home() {
             <div className="user-grid">
               {newError ? (
                 <ErrorFallback
-                  error={newError}
+                  error={{ message: newError }}
                   resetErrorBoundary={() => setName("")}
                 />
               ) : (
