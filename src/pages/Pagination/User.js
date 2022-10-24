@@ -6,9 +6,11 @@ import "./User.css";
 function Users() {
   const [page, setPage] = useState(1);
   const PER_PAGE = 9;
-  const { loading, error, data: apiData } = useFetch(
-    `https://randomuser.me/api?results=99&seed=abc`
-  );
+  const {
+    loading,
+    error,
+    data: apiData,
+  } = useFetch(`https://randomuser.me/api?results=99&seed=abc`);
 
   const [totalData, setTotalData] = useState([]);
 
@@ -77,7 +79,7 @@ function Users() {
           return (
             <div className="inner" key={index}>
               <Link
-                to={`/${getUserIndex(each.name) + 1}`}
+                to={`/users/${getUserIndex(each.name) + 1}`}
                 state={{ data: each }}
               >
                 <img src={image} alt="user" />
