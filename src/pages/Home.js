@@ -15,6 +15,7 @@ function ErrorFallback({ error, resetErrorBoundary }) {
 
 export default function Home() {
   const [name, setName] = React.useState("");
+
   const {
     loading,
     error,
