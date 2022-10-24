@@ -15,9 +15,11 @@ function ErrorFallback({ error, resetErrorBoundary }) {
 
 export default function Home() {
   const [name, setName] = React.useState("");
-  const { loading, error, data: apiData } = useFetch(
-    `https://randomuser.me/api/?results=99&seed=abc`
-  );
+  const {
+    loading,
+    error,
+    data: apiData,
+  } = useFetch(`https://randomuser.me/api/?results=99&seed=abc`);
 
   const [data, setData] = useState([]);
 
@@ -41,6 +43,14 @@ export default function Home() {
   useEffect(() => {
     if (name && /^[a-zA-Z]+$/.test(name) === false) {
       setNewError("You can only search for alphabets.");
+    } else if (
+      apiData?.results?.filter(
+        (val) =>
+          val.name?.first?.toLowerCase()?.startsWith(name) ||
+          val.name?.last?.toLowerCase()?.startsWith(name)
+      ) === []
+    ) {
+      setNewError("User does not exist!");
     } else {
       setNewError("");
     }
