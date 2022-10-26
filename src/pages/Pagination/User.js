@@ -68,7 +68,7 @@ function Users() {
   }
 
   return (
-    <div className="App">
+    <div className="Container">
       <h1 className="title">Users Database</h1>
       <div className="user-grid">
         {data?.map((each, index) => {
@@ -81,13 +81,16 @@ function Users() {
               <Link
                 to={`/users/${getUserIndex(each.name) + 1}`}
                 state={{ data: each }}
+                className="images"
               >
                 <img src={image} alt="user" />
-                <strong>
-                  <p key={name.toLowerCase().replaceAll(" ", "")}>{name}</p>
-                </strong>
-                <p>{phone}</p>
-                <p>{mail}</p>
+                <div className="info">
+                  <strong>
+                    <h4 key={name.toLowerCase().replaceAll(" ", "")}>{name}</h4>
+                  </strong>
+                  <p>{phone}</p>
+                  <p>{mail}</p>
+                </div>
               </Link>
             </div>
           );
@@ -118,6 +121,7 @@ function Users() {
           disabled={page >= pages}
           aria-disabled={page >= pages}
           onClick={setNext}
+          className="next"
         >
           next
         </button>

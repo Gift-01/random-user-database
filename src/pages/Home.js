@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import useFetch from "./Pagination/UsePagination";
 import "./Home.css";
+import { BsSearch } from "react-icons/bs";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -64,22 +65,24 @@ export default function Home() {
   }, [error]);
 
   return (
-    <div>
-      {/* <form> */}
+    <div className="wrapper">
       <div className="fixed">
-        <h1>Search Users Database</h1>
-        <p>
+        <h1 className="searchText">Search Users Database</h1>
+        <p className="search-text">
           Search for any user in the Users Database or{" "}
           <a href="/users">view all users</a>
         </p>
-        <input
-          placeholder="Search for a user..."
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-          value={name}
-          className="searchbar"
-        />
+        <div className="searchbarWrapper">
+          <input
+            placeholder="Search for a user..."
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+            value={name}
+            className="searchbar"
+          />
+          <BsSearch />
+        </div>
       </div>
       <div>
         <ErrorBoundary resetKeys={[newError]} FallbackComponent={ErrorFallback}>
@@ -95,7 +98,7 @@ export default function Home() {
               ) : (
                 data &&
                 data?.map((val, index) => (
-                  <div className="inner" key={index}>
+                  <div className="Inner" key={index}>
                     {val && val.picture && (
                       <img
                         src={val && val.picture && val.picture.large}
@@ -123,7 +126,6 @@ export default function Home() {
           )}
         </ErrorBoundary>
       </div>
-      {/* </form> */}
     </div>
   );
 }

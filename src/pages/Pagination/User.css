@@ -1,11 +1,26 @@
+.Container {
+  background-color: #e5e5e5;
+  min-height: 100vh;
+}
+.title {
+  padding: 40px;
+  font-size: 55px;
+  line-height: 64px;
+}
 .user-grid {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 
 .inner {
   flex-basis: 30%;
-  height: 200px;
+  height: 150px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 5px;
 }
 
 .inner a {
@@ -17,16 +32,84 @@
   object-fit: cover;
 }
 
+.images {
+  display: flex;
+  border-radius: 50px;
+}
+
+.info {
+  text-align: center;
+  padding-left: 15px;
+  margin: 10px;
+}
+.pagination {
+  padding: 10px;
+}
 .prev {
   margin-right: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #d7d7d7;
+  border-radius: 5px;
+}
+.next {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #d7d7d7;
+  border-radius: 5px;
 }
 
 .pageButton {
   margin-right: 10px;
+  background-color: #d7d7d7;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
 
 .currentPageButton {
   background: black;
   color: white;
   margin-right: 10px;
+  border: none;
+  padding: 10px;
+}
+button {
+  margin: 5px 0 30px 0;
+}
+@media (max-width: 1024px) {
+  .inner {
+    flex-basis: 25%;
+  }
+}
+
+@media (max-width: 769px) {
+  .title {
+    font-size: 45px;
+  }
+
+  .inner {
+    width: 90%;
+    flex-basis: unset;
+    height: 130px;
+  }
+
+  .info {
+    width: 60%;
+    overflow-wrap: break-word;
+  }
+
+  .info h4 {
+    font-size: 16px;
+    line-height: 15px;
+    margin-bottom: 7px;
+  }
+
+  .info p {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }

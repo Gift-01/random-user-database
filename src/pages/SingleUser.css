@@ -1,0 +1,39 @@
+.container {
+  background-color: #e5e5e5;
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userContainer {
+  background-color: white;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.userContainer img {
+  padding: 20px;
+  border-radius: 100%;
+}
+.userContainer p {
+  word-wrap: break-word;
+}
+.identity {
+  color: red;
+}
+@media (min-width: 768px) {
+  .userContainer p {
+    font-size: 25px;
+  }
+  .userContainer {
+    height: 75vh;
+    width: 50%;
+  }
+  .container {
+    padding: 30px;
+  }
+}
