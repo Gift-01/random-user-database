@@ -5,17 +5,10 @@
 }
 .wrapper {
   background-color: #ebebeb;
-  height: 100vh;
 }
 .searchbar {
   width: 90%;
   height: 100%;
-  /* border-radius: 8px;
-  border-width: 1px;  */
-  /* padding-left: 10px; */
-  /* margin-bottom: 50px; */
-  /* border-radius: 30px;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28); */
   border: none;
   outline: none;
 }
