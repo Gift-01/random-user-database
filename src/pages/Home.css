@@ -26,6 +26,7 @@
 .fixed {
   /* position: sticky; */
   top: 0;
+  height: 100vh;
   padding-top: 30px;
   display: flex;
   flex-direction: column;
@@ -78,5 +79,8 @@ input {
   .search-text {
     font-size: 15px;
     padding-left: 10px;
+  }
+  .searchbarWrapper{
+    width:80%;
   }
 }
